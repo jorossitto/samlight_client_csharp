@@ -53,15 +53,14 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BUTTON_CHANGE_TEXT_BY_NAME = new System.Windows.Forms.Button();
             this.EDIT_TEXT_STRING = new System.Windows.Forms.TextBox();
+            this.BUTTON_CHANGE_TEXT_BY_NAME = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.EDIT_ENTITY_NAME = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.HeatCodeEdit = new System.Windows.Forms.TextBox();
             this.HeatCodeText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axScSamlightClientCtrl1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,12 +79,13 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.BUTTON_TEST);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(11, 300);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(368, 151);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ethernet";
+            this.groupBox1.Visible = false;
             // 
             // BUTTON_TEST
             // 
@@ -100,47 +100,52 @@
             // 
             // EDIT_PORT_SAMLIGHT
             // 
-            this.EDIT_PORT_SAMLIGHT.Location = new System.Drawing.Point(248, 55);
+            this.EDIT_PORT_SAMLIGHT.Location = new System.Drawing.Point(247, 343);
             this.EDIT_PORT_SAMLIGHT.Name = "EDIT_PORT_SAMLIGHT";
             this.EDIT_PORT_SAMLIGHT.Size = new System.Drawing.Size(67, 20);
             this.EDIT_PORT_SAMLIGHT.TabIndex = 13;
             this.EDIT_PORT_SAMLIGHT.Text = "1024";
+            this.EDIT_PORT_SAMLIGHT.Visible = false;
             // 
             // EDIT_IP_SAMLIGHT
             // 
-            this.EDIT_IP_SAMLIGHT.Location = new System.Drawing.Point(85, 55);
+            this.EDIT_IP_SAMLIGHT.Location = new System.Drawing.Point(84, 343);
             this.EDIT_IP_SAMLIGHT.Name = "EDIT_IP_SAMLIGHT";
             this.EDIT_IP_SAMLIGHT.Size = new System.Drawing.Size(85, 20);
             this.EDIT_IP_SAMLIGHT.TabIndex = 12;
             this.EDIT_IP_SAMLIGHT.Text = "127.0.0.1";
+            this.EDIT_IP_SAMLIGHT.Visible = false;
             // 
             // BUTTON_DISCONNECT_ETHERNET
             // 
-            this.BUTTON_DISCONNECT_ETHERNET.Location = new System.Drawing.Point(281, 89);
+            this.BUTTON_DISCONNECT_ETHERNET.Location = new System.Drawing.Point(280, 377);
             this.BUTTON_DISCONNECT_ETHERNET.Name = "BUTTON_DISCONNECT_ETHERNET";
             this.BUTTON_DISCONNECT_ETHERNET.Size = new System.Drawing.Size(75, 23);
             this.BUTTON_DISCONNECT_ETHERNET.TabIndex = 9;
             this.BUTTON_DISCONNECT_ETHERNET.Text = "Disconnect";
             this.BUTTON_DISCONNECT_ETHERNET.UseVisualStyleBackColor = true;
+            this.BUTTON_DISCONNECT_ETHERNET.Visible = false;
             this.BUTTON_DISCONNECT_ETHERNET.Click += new System.EventHandler(this.BUTTON_DISCONNECT_ETHERNET_Click);
             // 
             // BUTTON_CONNECT_ETHERNET
             // 
-            this.BUTTON_CONNECT_ETHERNET.Location = new System.Drawing.Point(37, 89);
+            this.BUTTON_CONNECT_ETHERNET.Location = new System.Drawing.Point(36, 377);
             this.BUTTON_CONNECT_ETHERNET.Name = "BUTTON_CONNECT_ETHERNET";
             this.BUTTON_CONNECT_ETHERNET.Size = new System.Drawing.Size(75, 23);
             this.BUTTON_CONNECT_ETHERNET.TabIndex = 8;
             this.BUTTON_CONNECT_ETHERNET.Text = "Connect";
             this.BUTTON_CONNECT_ETHERNET.UseVisualStyleBackColor = true;
+            this.BUTTON_CONNECT_ETHERNET.Visible = false;
             this.BUTTON_CONNECT_ETHERNET.Click += new System.EventHandler(this.BUTTON_CONNECT_ETHERNET_Click);
             // 
             // EDIT_STATUS_CONNECTED
             // 
-            this.EDIT_STATUS_CONNECTED.Location = new System.Drawing.Point(147, 91);
+            this.EDIT_STATUS_CONNECTED.Location = new System.Drawing.Point(146, 379);
             this.EDIT_STATUS_CONNECTED.Name = "EDIT_STATUS_CONNECTED";
             this.EDIT_STATUS_CONNECTED.ReadOnly = true;
             this.EDIT_STATUS_CONNECTED.Size = new System.Drawing.Size(91, 20);
             this.EDIT_STATUS_CONNECTED.TabIndex = 5;
+            this.EDIT_STATUS_CONNECTED.Visible = false;
             // 
             // BUTTON_CLOSE
             // 
@@ -286,23 +291,13 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.EDIT_TEXT_STRING);
-            this.groupBox2.Location = new System.Drawing.Point(13, 169);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(367, 62);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Serial Number";
             this.groupBox2.Enter += new System.EventHandler(this.GroupBox2_Enter);
-            // 
-            // BUTTON_CHANGE_TEXT_BY_NAME
-            // 
-            this.BUTTON_CHANGE_TEXT_BY_NAME.Location = new System.Drawing.Point(155, 305);
-            this.BUTTON_CHANGE_TEXT_BY_NAME.Name = "BUTTON_CHANGE_TEXT_BY_NAME";
-            this.BUTTON_CHANGE_TEXT_BY_NAME.Size = new System.Drawing.Size(59, 23);
-            this.BUTTON_CHANGE_TEXT_BY_NAME.TabIndex = 15;
-            this.BUTTON_CHANGE_TEXT_BY_NAME.Text = "Set";
-            this.BUTTON_CHANGE_TEXT_BY_NAME.UseVisualStyleBackColor = true;
-            this.BUTTON_CHANGE_TEXT_BY_NAME.Click += new System.EventHandler(this.BUTTON_CHANGE_TEXT_BY_NAME_Click);
             // 
             // EDIT_TEXT_STRING
             // 
@@ -311,6 +306,18 @@
             this.EDIT_TEXT_STRING.Size = new System.Drawing.Size(113, 20);
             this.EDIT_TEXT_STRING.TabIndex = 14;
             this.EDIT_TEXT_STRING.Text = "MyText";
+            this.EDIT_TEXT_STRING.TextChanged += new System.EventHandler(this.EDIT_TEXT_STRING_TextChanged);
+            this.EDIT_TEXT_STRING.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EDIT_TEXT_STRING_KeyPress);
+            // 
+            // BUTTON_CHANGE_TEXT_BY_NAME
+            // 
+            this.BUTTON_CHANGE_TEXT_BY_NAME.Location = new System.Drawing.Point(154, 148);
+            this.BUTTON_CHANGE_TEXT_BY_NAME.Name = "BUTTON_CHANGE_TEXT_BY_NAME";
+            this.BUTTON_CHANGE_TEXT_BY_NAME.Size = new System.Drawing.Size(59, 23);
+            this.BUTTON_CHANGE_TEXT_BY_NAME.TabIndex = 15;
+            this.BUTTON_CHANGE_TEXT_BY_NAME.Text = "Set";
+            this.BUTTON_CHANGE_TEXT_BY_NAME.UseVisualStyleBackColor = true;
+            this.BUTTON_CHANGE_TEXT_BY_NAME.Click += new System.EventHandler(this.BUTTON_CHANGE_TEXT_BY_NAME_Click);
             // 
             // label3
             // 
@@ -334,9 +341,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.HeatCodeEdit);
-            this.groupBox3.Location = new System.Drawing.Point(13, 237);
+            this.groupBox3.Location = new System.Drawing.Point(12, 80);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(367, 62);
             this.groupBox3.TabIndex = 30;
@@ -351,6 +357,7 @@
             this.HeatCodeEdit.Size = new System.Drawing.Size(113, 20);
             this.HeatCodeEdit.TabIndex = 14;
             this.HeatCodeEdit.Text = "MyText";
+            this.HeatCodeEdit.TextChanged += new System.EventHandler(this.HeatCodeEdit_TextChanged);
             // 
             // HeatCodeText
             // 
@@ -374,22 +381,11 @@
             this.label5.Visible = false;
             this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(288, 30);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(59, 23);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Set";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
-            this.button6.Click += new System.EventHandler(this.Button6_Click);
-            // 
             // samlight_client_csharp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 626);
+            this.ClientSize = new System.Drawing.Size(384, 626);
             this.Controls.Add(this.BUTTON_CHANGE_TEXT_BY_NAME);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.HeatCodeText);
@@ -453,7 +449,6 @@
         private System.Windows.Forms.TextBox HeatCodeEdit;
         private System.Windows.Forms.TextBox HeatCodeText;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button6;
     }
 }
 

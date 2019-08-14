@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +19,7 @@ namespace samlight_client_csharp
         {
             InitializeComponent();
             m_samlight = axScSamlightClientCtrl1;
+            ConnectToSamlight();
         }
 
         //public samlight_client_csharp()
@@ -60,6 +60,25 @@ namespace samlight_client_csharp
             long res;
             res = axScSamlightClientCtrl1.ScOpenTCPConnection( EDIT_IP_SAMLIGHT.Text, Convert.ToInt32( EDIT_PORT_SAMLIGHT.Text ) );
             if( res == 1 )
+                EDIT_STATUS_CONNECTED.Text = "Connected";
+            else
+                EDIT_STATUS_CONNECTED.Text = "Connected";
+
+            string testString = "";
+            m_samlight.ScGetEntityStringData(EDIT_ENTITY_NAME.Text, 2, ref testString);
+            //MessageBox.Show(testString);
+            //MessageBox.Show(EDIT_ENTITY_NAME.Text);
+            EDIT_TEXT_STRING.Text = testString;
+            m_samlight.ScGetEntityStringData(HeatCodeText.Text, 2, ref testString);
+            HeatCodeEdit.Text = testString;
+            //MessageBox.Show(testString);
+            //MessageBox.Show(EDIT_ENTITY_NAME.Text);
+        }
+        private void ConnectToSamlight()
+        {
+            long res;
+            res = axScSamlightClientCtrl1.ScOpenTCPConnection(EDIT_IP_SAMLIGHT.Text, Convert.ToInt32(EDIT_PORT_SAMLIGHT.Text));
+            if (res == 1)
                 EDIT_STATUS_CONNECTED.Text = "Connected";
             else
                 EDIT_STATUS_CONNECTED.Text = "Connected";
@@ -262,9 +281,19 @@ namespace samlight_client_csharp
                 return;
             }
 
-            m_samlight.ScChangeTextByName(EDIT_ENTITY_NAME.Text, EDIT_TEXT_STRING.Text);
-            m_samlight.ScChangeTextByName(HeatCodeText.Text, HeatCodeEdit.Text);
             EDIT_TEXT_STRING.Text = (Convert.ToInt64(EDIT_TEXT_STRING.Text) + 1).ToString();
+            EDIT_TEXT_STRING.Text = EDIT_TEXT_STRING.Text.PadLeft(5, '0');
+            m_samlight.ScChangeTextByName(EDIT_ENTITY_NAME.Text, EDIT_TEXT_STRING.Text);
+            HeatCodeEdit.Text = HeatCodeEdit.Text.PadLeft(4, '0');
+            m_samlight.ScChangeTextByName(HeatCodeText.Text, HeatCodeEdit.Text);
+
+            if (Application.MessageLoop)
+            {
+                // WinForms app
+                Application.Exit();
+            }
+
+
         }
 
         private void Button6_Click(object sender, EventArgs e)
@@ -282,6 +311,27 @@ namespace samlight_client_csharp
         private void GroupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void EDIT_TEXT_STRING_TextChanged(object sender, EventArgs e)
+        {
+            EDIT_TEXT_STRING.MaxLength = 5;
+
+        }
+
+        private void HeatCodeEdit_TextChanged(object sender, EventArgs e)
+        {
+            HeatCodeEdit.MaxLength = 4;
+            
+        }
+
+        private void EDIT_TEXT_STRING_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if(!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 

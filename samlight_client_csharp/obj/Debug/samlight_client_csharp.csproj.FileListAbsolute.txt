@@ -28,3 +28,7 @@ C:\Users\Joseph\Downloads\samlight_client_csharp\samlight_client_csharp\obj\Debu
 C:\Users\Joseph\Downloads\samlight_client_csharp\samlight_client_csharp\obj\Debug\samlight_client_csharp.csproj.CoreCompileInputs.cache
 C:\Users\Joseph\Downloads\samlight_client_csharp\samlight_client_csharp\obj\Debug\samlight_client_csharp.exe
 C:\Users\Joseph\Downloads\samlight_client_csharp\samlight_client_csharp\obj\Debug\samlight_client_csharp.pdb
+C:\Users\Joseph\Downloads\samlight_client_csharp\samlight_client_csharp\bin\Debug\samlight_client_csharp.exe.manifest
+C:\Users\Joseph\Downloads\samlight_client_csharp\samlight_client_csharp\bin\Debug\samlight_client_csharp.application
+C:\Users\Joseph\Downloads\samlight_client_csharp\samlight_client_csharp\obj\Debug\samlight_client_csharp.exe.manifest
+C:\Users\Joseph\Downloads\samlight_client_csharp\samlight_client_csharp\obj\Debug\samlight_client_csharp.application
